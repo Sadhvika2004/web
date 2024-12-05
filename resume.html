@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Main Content Styles */
+        main {
+            width: 80%;
+            max-width: 1000px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: #007bff;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        section p,
+        section ul {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        section ul {
+            padding-left: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer .logout-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        footer .logout-btn:hover {
+            background-color: #e5533b;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                width: 90%;
+                padding: 15px;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            section p,
+            section ul {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Resume</h1>
+        <p>Welcome, <?php echo $_SESSION['name']; ?>!</p>
+    </header>
+    <main>
+        <section>
+            <h2>Personal Information</h2>
+            <p><strong>Name:</strong> Sadhvika</p>
+            <p><strong>Email:</strong> sadhvika@gmail.com</p>
+            <p><strong>Phone:</strong> 7349266573</p>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li>Bachelor of Engineering in Computer Science</li>
+                <li>KSSEM</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Experience</h2>
+            <p>Software Developer at ABC Corp</p>
+        </section>
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming: Python, JavaScript, PHP</li>
+                <li>Web Development: HTML, CSS, jQuery</li>
+                <li>Database Management: MySQL</li>
+                <li>Problem Solving and Debugging</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Project 1:</strong> Online Registration System</li>
+                <li><strong>Project 2:</strong> E-commerce Website Development</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <a href="logout.php" class="logout-btn">Logout</a>
+    </footer>
+</body>
+</html>
